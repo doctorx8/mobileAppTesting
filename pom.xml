@@ -12,5 +12,23 @@
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
-
+<dependencies>
+    <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+    <dependency>
+        <groupId>io.appium</groupId>
+        <artifactId>java-client</artifactId>
+        <version>7.5.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.11</version>
+    </dependency>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-server</artifactId>
+        <version>3.141.59</version>
+    </dependency>
+</dependencies>
 </project>
