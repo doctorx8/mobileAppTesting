@@ -47,9 +47,9 @@ public class Dialing {
         dialingNumbers.add(nine);
 
 
-        String inputNumbers="1235434657";
 
-        for(int i=0;i<=inputNumbers.length()-1;i++){
+
+        for(int i=0;i<=dialingNumbers.size();i++){
 
                 dialingNumbers.get(i).click();
 
