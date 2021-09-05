@@ -49,7 +49,7 @@ public class Dialing {
 
 
 
-        for(int i=0;i<=dialingNumbers.size();i++){
+        for(int i=0;i<dialingNumbers.size();i++){
 
                 dialingNumbers.get(i).click();
 
