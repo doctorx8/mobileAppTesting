@@ -2,7 +2,7 @@ import java.net.MalformedURLException;
 
 public class Switch extends installAppAndroidEmulator {
 
-    public static void main(String[] args) throws MalformedURLException, InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         setUpDesiredCapabilities("ApiDemos-debug.apk");
         driver.findElementByXPath("//android.widget.TextView[@text='Views']").click();
 
