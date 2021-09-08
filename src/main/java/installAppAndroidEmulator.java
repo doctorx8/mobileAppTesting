@@ -7,20 +7,18 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class installAppAndroidEmulator {
+   static DesiredCapabilities dc=new DesiredCapabilities();
+   static AndroidDriver<WebElement> driver;
+    static URL url;
+static public void setUpDesiredCapabilities(String apkPath) throws MalformedURLException {
+    dc=new DesiredCapabilities();
+    dc.setCapability(MobileCapabilityType.AUTOMATION_NAME,"Appium");
+    dc.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
+    dc.setCapability(MobileCapabilityType.BROWSER_VERSION,9.0);
+    dc.setCapability(MobileCapabilityType.DEVICE_NAME,"Android Emulator");
+    dc.setCapability(MobileCapabilityType.APP,"C:\\Users\\xuekr\\Downloads\\"+apkPath);
+    url=new URL("http://localhost:4723/wd/hub");
+    driver=new AndroidDriver<>(url,dc);
+}
 
-    public static void main(String[] args) throws MalformedURLException {
-
-        DesiredCapabilities dc=new DesiredCapabilities();
-        dc.setCapability(MobileCapabilityType.AUTOMATION_NAME,"Appium");
-        dc.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
-        dc.setCapability(MobileCapabilityType.BROWSER_VERSION,9.0);
-        dc.setCapability(MobileCapabilityType.DEVICE_NAME,"Android Emulator");
-        dc.setCapability(MobileCapabilityType.APP,"C:\\Users\\xuekr\\Downloads\\E Commerce Android App Demo_v3.0.1_apkpure.com.apk");
-        URL url=new URL("http://localhost:4723/wd/hub");
-        AndroidDriver<WebElement> driver=new AndroidDriver<WebElement>(url,dc);
-        driver.quit();
-
-
-
-    }
 }
